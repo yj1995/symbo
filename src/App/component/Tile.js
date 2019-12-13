@@ -3,7 +3,7 @@ import React from 'react';
 function Tile({ data, click }) {
     return (
         <div className='tileBody' id={data.plan.planName} onClick={(e) => { click(e); }}>
-            <div className='tileImage' style={{ backgroundImage: 'url(../image/' + data.insuranceProviderId + '.png)' }} />
+            <div className='tileImage' style={{ backgroundImage: 'url(./image/' + data.insuranceProviderId + '.png)' }} />
             <div className='tileInfo'>
                 <div className='tileLabel'>
                     <div className='tileName'>Plan Name:</div>

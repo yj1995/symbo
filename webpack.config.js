@@ -56,9 +56,5 @@ module.exports = {
       { from: './src/App/component/image/RELIGARE_HEALTH.png', to: './image/RELIGARE_HEALTH.png' }
     ]),
     require('autoprefixer'),
-  ],
-  devServer: {
-    open: true,
-    historyApiFallback: true
-  }
+  ]
 }
