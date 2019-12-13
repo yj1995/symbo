@@ -51,9 +51,9 @@ module.exports = {
     new HTMLWebpackPlugin(),
     new CopyPlugin([
       { from: './src/App/data.json', to: './data.json' },
-      { from: './src/App/image/HDFC_ERGO.png', to: './image/HDFC_ERGO.png' },
-      { from: './src/App/image/RELIANCE_GENERAL.png', to: './image/RELIANCE_GENERAL.png' },
-      { from: './src/App/image/RELIGARE_HEALTH.png', to: './image/RELIGARE_HEALTH.png' }
+      { from: './src/App/component/image/HDFC_ERGO.png', to: './image/HDFC_ERGO.png' },
+      { from: './src/App/component/image/RELIANCE_GENERAL.png', to: './image/RELIANCE_GENERAL.png' },
+      { from: './src/App/component/image/RELIGARE_HEALTH.png', to: './image/RELIGARE_HEALTH.png' }
     ]),
     require('autoprefixer'),
   ],
