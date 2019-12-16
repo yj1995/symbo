@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.less';
 import { Parent } from './component/Parent';
+import { PlanDetail } from './component/PlanDetail';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 class RoutePath extends Component {
@@ -19,14 +20,14 @@ class RoutePath extends Component {
   }
 
   render() {
-    const pathName = window.location.pathname;
+    console.log(window.location.pathname);
     return (
       <div className='Parent'>
         {/* <Start /> */}
         <BrowserRouter>
           <Switch>
-            <Route exact path={`${pathName}`} component={Parent} />
-            {/* <Route path={`${pathName}Online`} component={Online} /> */}
+            <Route exact path={`${window.location.pathname}`} component={Parent} />
+            <Route path={`${window.location.pathname}PlanDetail`} component={PlanDetail} />
           </Switch>
         </BrowserRouter>
       </div>

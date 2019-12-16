@@ -26,11 +26,19 @@ class Parent extends Component {
 
   detailPage(e) {
     const clickPlan = e.currentTarget.getAttribute('id');
-    const planDetail = _.find(this.state.data, (value) => {
+    const data = _.find(this.state.data, (value) => {
       if (value.plan.planName === clickPlan) {
         return value
       }
     });
+    if (data) {
+      let pathName = window.location.pathname;
+      pathName = '';
+      this.props.history.push({
+        pathname: `${pathName}PlanDetail`,
+        data,
+      })
+    }
   }
 
   render() {
