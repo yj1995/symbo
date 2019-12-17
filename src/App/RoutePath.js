@@ -8,8 +8,11 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 class RoutePath extends Component {
   constructor(props) {
     super(props)
+    console.log(performance);
     if (performance) {
+      console.log(performance, 'console.log(performance);');
       if (performance.navigation.type == 1) {
+        console.log(performance.navigation.type, 'performance.navigation.type');
         let currentpath = window.location.pathname.split('/');
         console.log('currentpath[2].length', currentpath[2].length);
         if (currentpath.length > 1 && window.location.hostname === 'localhost') {
