@@ -17,20 +17,19 @@ class RoutePath extends Component {
           window.location.pathname = `/${currentpath[1]}/`;
         }
       }
-      console.log(window.location.pathname);
     }
   }
 
   render() {
-    console.log(window.location.pathname, performance.navigation.type);
+    const pathName = window.location.pathname;
     return (
       <div className='Parent'>
         {/* <Start /> */}
         <BrowserRouter>
           <Switch>
-            <Route exact path={`${window.location.pathname}`} component={Parent} />
-            <Route path={`${window.location.pathname}PlanDetail`} component={PlanDetail} />
-            <Route path={`${window.location.pathname}ComparePage`} component={ComparePage} />
+            <Route exact path={`${pathName}`} component={Parent} />
+            <Route path={`${pathName}PlanDetail`} component={PlanDetail} />
+            <Route path={`${pathName}ComparePage`} component={ComparePage} />
           </Switch>
         </BrowserRouter>
       </div>
