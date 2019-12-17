@@ -16,6 +16,7 @@ class RoutePath extends Component {
           window.location.pathname = '/';
         } else if (currentpath[2].length) {
           window.location.pathname = `/${currentpath[1]}/`;
+          console.log(' window.location.pathname', window.location.pathname);
         } else {
           window.location.pathname = `/${currentpath[1]}/`;
         }
