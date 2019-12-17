@@ -22,6 +22,18 @@
             }
         }
 
+        .comparePlan {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            padding: 10px;
+            background: white;
+            text-align: center;
+            border: 1px solid black;
+            left: 0px;
+            font-size: 17px;
+        }
+
         .tileParent {
             display: flex;
             flex-wrap: wrap;
@@ -30,6 +42,7 @@
             justify-content: center;
             position: relative;
             top: 46px;
+            padding-bottom: 40px;
 
             .tileBody {
                 display: table;
@@ -39,7 +52,6 @@
                 text-align: center;
                 line-height: 30px;
                 font-size: 15px;
-                cursor: pointer;
 
                 .tileImage {
                     display: table-cell;
@@ -57,11 +69,27 @@
 
                     .tileLabel {
                         display: table;
+
+                        .detail {
+                            padding: 10px;
+                            margin-right: 20px;
+                            width: 120px;
+                            font-size: 15px;
+                            background: dodgerblue;
+                            color: white;
+                            border: none;
+                            cursor: pointer;
+                        }
+
+                        .checkboxStyle {
+                            font-size: 18px;
+                            padding-left: 5px;
+                        }
                     }
 
                     .tileName {
                         display: table-cell;
-                        min-width: 76px;
+                        min-width: 96px;
                         padding-right: 5px;
                     }
 
@@ -72,12 +100,46 @@
 
                     .tileProvider {
                         display: table-cell;
-                        width: 118px;
+                        width: 96px;
                         padding-right: 5px;
-                        text-align: left;
                     }
                 }
             }
+        }
+
+        .parentTable {
+            display: grid;
+            grid-template-columns: 18% 82%;
+            background-color: #2196F3;
+            padding: 10px;
+            color: black;
+            font-size: 20px;
+
+            .parentCell {
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 5px;
+                text-align: center;
+                word-break: break-word;
+
+                .feature {
+                    text-align: left;
+                }
+            }
+        }
+
+        .backButton {
+            margin-top: 10px;
+            width: 160px;
+            font-size: 18px;
+            position: relative;
+            border: none;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2196F3;
+            padding: 10px;
+            color: white;
+            height: 40px;
         }
     }
 }
