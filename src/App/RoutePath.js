@@ -13,6 +13,8 @@ class RoutePath extends Component {
         let currentpath = window.location.pathname.split('/');
         if (currentpath.length > 1 && window.location.hostname === 'localhost') {
           window.location.pathname = '/';
+        } else if (currentpath[2].length) {
+          window.location.pathname = `/${currentpath[1]}/`;
         } else {
           window.location.pathname = `/${currentpath[1]}/`;
         }
