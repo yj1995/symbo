@@ -10,15 +10,32 @@
             z-index: 10;
             border: 3px solid black;
 
-            .sort&filterButton {
+            .filterButton {
                 position: relative;
                 min-width: 80px;
                 min-height: 30px;
                 font-size: 15px;
                 top: 50%;
-                left: 50%;
+                font-weight: bold;
+                margin-right: 14px;
+                left: 42%;
+                background-color: #f8f8f8;
                 padding: 10px;
+                color: black;
+                transform: translate(-42%, -50%);
+            }
+
+            .sortBy {
+                height: 41px;
+                min-width: 150px;
+                word-break: break-word;
+                font-size: 15px;
+                position: relative;
+                left: 50%;
+                top: 50%;
+                font-weight: bold;
                 transform: translate(-50%, -50%);
+                text-align-last: center;
             }
         }
 
@@ -32,6 +49,8 @@
             border: 1px solid black;
             left: 0px;
             font-size: 17px;
+            font-weight: bold;
+            color: black;
         }
 
         .tileParent {
@@ -44,11 +63,19 @@
             top: 46px;
             padding-bottom: 40px;
 
+            .noData {
+                color: white;
+                font-size: 20px;
+                position: relative;
+                top: 20px;
+            }
+
             .tileBody {
                 display: table;
                 background-color: rgb(241, 241, 241);
                 width: 600px;
                 margin: 10px;
+                height: 238px;
                 text-align: center;
                 line-height: 30px;
                 font-size: 15px;
@@ -66,6 +93,7 @@
                     width: 50%;
                     word-break: break-word;
                     padding: 10px;
+                    vertical-align: middle;
 
                     .tileLabel {
                         display: table;
@@ -140,6 +168,61 @@
             padding: 10px;
             color: white;
             height: 40px;
+        }
+
+        .filterParent {
+            z-index: 23;
+            position: fixed;
+            min-width: 250px;
+            top: 47px;
+            left: 440px;
+            background: white;
+            border: 2px solid black;
+
+            .filterTable {
+                display: table;
+                width: 100%;
+                position: relative;
+                padding: 10px;
+                text-align: center;
+                font-size: 17px;
+                font-weight: bold;
+                box-sizing: border-box;
+            }
+
+            .filterButton {
+                position: relative;
+                left: 50%;
+                height: 40px;
+                text-align: center;
+                width: 100%;
+                border: none;
+                color: white;
+                font-size: 18px;
+                transform: translateX(-50%);
+                background: dodgerblue;
+                border: 2px solid black;
+                border-left: 0px;
+                border-right: 0px;
+                border-bottom: 0px;
+            }
+
+            .filterRow {
+                display: table-row;
+                width: 100%;
+
+                .filterInput {
+                    display: table-cell;
+                    margin-left: 10px;
+                }
+
+                .filterCheckbox {
+                    display: table-cell;
+                    box-sizing: content-box;
+                    word-break: break-word;
+                    padding: 5px 0px 5px 5px;
+                }
+            }
         }
     }
 }

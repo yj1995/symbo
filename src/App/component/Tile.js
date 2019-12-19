@@ -1,4 +1,6 @@
 import React from 'react';
+
+// This is used to create individual tile
 function Tile({ data, click, checkBox }) {
     return (
         <div className='tileBody'>

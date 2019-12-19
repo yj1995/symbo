@@ -5,12 +5,14 @@ class ComparePage extends Component {
         super(props)
         this.data = props.history.location.selected;
         this.planDetail = this.planDetail.bind(this);
+
+        // This used to see which key wanted to compared between the tile
         this.displayLabel = ['Plan Name', 'Insurance Provider Name', 'Status', 'Medical Features', 'Travel Features', 'Plan Type', 'Sum Insured', 'Premium'];
         this.display = ['planName', 'insuranceProviderName', 'status', 'MedicalFeatures', 'TravelFeatures', 'planType', 'sumInsured', 'amountValue'];
     }
 
+    // This function used to create compared page
     planDetail() {
-        console.log(this.data[0]);
         const displayElement = [];
         let string = [];
         this.display.forEach((val, i) => {

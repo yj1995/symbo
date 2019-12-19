@@ -5,9 +5,13 @@ class PlanDetail extends Component {
         super(props)
         this.data = props.history.location.data;
         this.planDetail = this.planDetail.bind(this);
+
+        // This used to see which key wanted display on the page
         this.displayLabel = ['Plan Name', 'Insurance Provider Name', 'Status', 'Medical Features', 'Travel Features', 'Plan Type', 'Sum Insured'];
         this.display = ['planName', 'insuranceProviderName', 'status', 'MedicalFeatures', 'TravelFeatures', 'planType', 'sumInsured'];
     }
+
+    // This function is used create detail view page
     planDetail() {
         const displayElement = [];
         let string = [];
